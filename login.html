@@ -163,7 +163,15 @@ button:active {
             // Get the username and password from the form
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
+            
+            if (username === "admin" && password === "pass") {
+                window.location.href = "/webcontrol";
+            } else {
+                alert("Invalid username or password");
+            }
+
         
+            /*
             fetch("/login", {
             method: "POST",
             body: JSON.stringify({ username, password }),
@@ -180,6 +188,7 @@ button:active {
                 alert("Invalid username or password");
                 }
             });
+            */
         }
     </script>
 </body>
